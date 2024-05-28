@@ -545,7 +545,7 @@ The following activation properties are available:
 | Property | Note
 
 | `on-profile`
-| A profile expression that must match for the document to be active.
+| A profile expression that must match for the document to be active. Such expression can include the NOT operator `!` to allow for any profile but this one. e.g. `!dev` will activate properties for all profiles but 'dev'.
 
 | `on-cloud-platform`
 | The `CloudPlatform` that must be detected for the document to be active.
@@ -565,7 +565,6 @@ spring:
       on-profile: "prod | staging"
 myotherprop: "sometimes-set"
 ----
-
 
 
 [[features.external-config.encrypting]]
